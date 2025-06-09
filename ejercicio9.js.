@@ -1,1 +1,24 @@
+function getOldestXMenMember(members) {
+  if (members.length === 0) return null;
+  let oldest = members[0];
+  for (let i = 1; i < members.length; i++) {
+    if (members[i].year < oldest.year) {
+      oldest = members[i];
+    }
+  }
+  return oldest;
+}
+
+// Ejemplo de uso:
+const xmenMembers = [
+  { name: 'Professor X', year: 1963 },
+  { name: 'Cyclops', year: 1963 },
+  { name: 'Iceman', year: 1963 },
+  { name: 'Beast', year: 1963 },
+  { name: 'Angel', year: 1963 },
+  { name: 'Wolverine', year: 1974 },
+  { name: 'Storm', year: 1975 }
+];
+
+console.log(getOldestXMenMember(xmenMembers));
 
